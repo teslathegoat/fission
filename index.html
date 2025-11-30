@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FissionPrime | Advanced Nuclear Energy Solutions</title>
+    <meta name="description" content="FissionPrime delivers cutting-edge nuclear energy and fission technology solutions for a cleaner, sustainable future.">
+    <meta name="keywords" content="nuclear energy, clean energy, fission technology, sustainable power, energy solutions">
+    <meta name="author" content="FissionPrime">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fissionprime.com/">
+    <meta property="og:title" content="FissionPrime | Advanced Nuclear Energy Solutions">
+    <meta property="og:description" content="FissionPrime delivers cutting-edge nuclear energy and fission technology solutions for a cleaner, sustainable future.">
+    <meta property="og:image" content="https://fissionprime.com/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://fissionprime.com/">
+    <meta property="twitter:title" content="FissionPrime | Advanced Nuclear Energy Solutions">
+    <meta property="twitter:description" content="FissionPrime delivers cutting-edge nuclear energy and fission technology solutions for a cleaner, sustainable future.">
+    <meta property="twitter:image" content="https://fissionprime.com/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚛️</text></svg>">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "FissionPrime",
+      "url": "https://fissionprime.com",
+      "logo": "https://fissionprime.com/logo.png",
+      "description": "Advanced nuclear energy and fission technology solutions for a cleaner, sustainable future.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Energy Avenue",
+        "addressLocality": "Tech City",
+        "addressRegion": "CA",
+        "postalCode": "94025",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-123-4567",
+        "contactType": "customer service",
+        "email": "info@fissionprime.com"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/fissionprime",
+        "https://twitter.com/fissionprime"
+      ]
+    }
+    </script>
+    
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-gray: #f8f9fa;
+            --secondary-gray: #e9ecef;
+            --medium-gray: #6c757d;
+            --dark-gray: #343a40;
+            --accent-color: #0066cc;
+            --text-color: #212529;
+            --max-width: 1200px;
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--dark-gray);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+        }
+        
+        h3 {
+            font-size: 1.75rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Header and Navigation */
+        header {
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-gray);
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo span {
+            margin-right: 0.5rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            color: var(--dark-gray);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 10rem 0 5rem;
+            background-color: var(--primary-gray);
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: var(--medium-gray);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #0052a3;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+        
+        /* Sections */
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: var(--primary-gray);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card h3 {
+            margin-bottom: 1rem;
+        }
+        
+        /* Blog Section */
+        .blog {
+            background-color: #fff;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .blog-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            cursor: pointer;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+        }
+        
+        .blog-image {
+            height: 220px;
+            position: relative;
+            overflow: hidden;
+            background-color: var(--secondary-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .blog-image.fallback {
+            font-size: 4rem;
+            color: var(--medium-gray);
+        }
+        
+        .blog-card:hover .blog-image img {
+            transform: scale(1.05);
+        }
+        
+        .blog-content {
+            padding: 1.8rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .blog-date {
+            color: var(--accent-color);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .blog-content h3 {
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            line-height: 1.3;
+            color: var(--dark-gray);
+            transition: var(--transition);
+        }
+        
+        .blog-card:hover .blog-content h3 {
+            color: var(--accent-color);
+        }
+        
+        .blog-excerpt {
+            color: var(--medium-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            flex-grow: 1;
+        }
+        
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            font-weight: 600;
+            color: var(--accent-color);
+            transition: var(--transition);
+        }
+        
+        .read-more:hover {
+            text-decoration: none;
+            transform: translateX(5px);
+        }
+        
+        .read-more::after {
+            content: '→';
+            margin-left: 5px;
+            transition: var(--transition);
+        }
+        
+        .blog-card:hover .read-more::after {
+            margin-left: 10px;
+        }
+        
+        /* Blog Detail Modal */
+        .blog-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 2rem 0;
+        }
+        
+        .blog-modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .blog-modal-content {
+            background-color: white;
+            border-radius: 12px;
+            max-width: 800px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        .blog-modal-header {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+            background-color: var(--secondary-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .blog-modal-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .blog-modal-header.fallback {
+            font-size: 6rem;
+            color: var(--medium-gray);
+        }
+        
+        .blog-modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            z-index: 10;
+        }
+        
+        .blog-modal-close:hover {
+            background-color: white;
+            transform: rotate(90deg);
+        }
+        
+        .blog-modal-body {
+            padding: 2.5rem;
+        }
+        
+        .blog-modal-title {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: var(--dark-gray);
+        }
+        
+        .blog-modal-meta {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            color: var(--medium-gray);
+            font-size: 0.95rem;
+        }
+        
+        .blog-modal-meta .author {
+            margin-right: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .blog-modal-meta .author span {
+            margin-right: 0.5rem;
+        }
+        
+        .blog-modal-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .blog-modal-content h3 {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: var(--primary-gray);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info p {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-info span {
+            margin-right: 0.5rem;
+        }
+        
+        .contact-form {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--secondary-gray);
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+        }
+        
+        textarea.form-control {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-gray);
+            color: white;
+            padding: 3rem 0 1.5rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column h4 {
+            color: white;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .footer-column h4:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links a {
+            color: #adb5bd;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #adb5bd;
+            font-size: 0.875rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                transform: translateY(-150%);
+                transition: transform 0.3s ease;
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+            }
+            
+            .nav-links li {
+                margin: 0.5rem 0;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .blog-modal-body {
+                padding: 1.5rem;
+            }
+            
+            .blog-modal-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <span>⚛️</span> FissionPrime
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Advanced Nuclear Energy Solutions for a Sustainable Future</h1>
+            <p>FissionPrime delivers cutting-edge fission technology and clean energy solutions to power tomorrow's world safely and efficiently.</p>
+            <a href="#services" class="btn">Explore Our Services</a>
+            <a href="#contact" class="btn btn-outline" style="margin-left: 1rem;">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Comprehensive nuclear energy and fission technology solutions</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Nuclear Power Plant Design</h3>
+                    <p>State-of-the-art nuclear power plant designs that maximize efficiency while ensuring the highest safety standards and minimal environmental impact.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔬</div>
+                    <h3>Fission Technology Research</h3>
+                    <p>Pioneering research in advanced fission technologies to develop next-generation nuclear reactors with improved fuel efficiency and waste reduction.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Safety & Compliance</h3>
+                    <p>Comprehensive safety assessments and regulatory compliance services to ensure your nuclear energy projects meet all international standards.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">♻️</div>
+                    <h3>Waste Management Solutions</h3>
+                    <p>Innovative nuclear waste management strategies that minimize environmental impact and maximize resource recovery.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Energy Consulting</h3>
+                    <p>Expert consulting services to help governments and organizations integrate nuclear energy into their clean energy portfolios.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎓</div>
+                    <h3>Training & Education</h3>
+                    <p>Specialized training programs for nuclear energy professionals to ensure safe and efficient operation of nuclear facilities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <div class="section-title">
+                <h2>Latest Insights</h2>
+                <p>Stay updated with the latest developments in nuclear energy and fission technology</p>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-card" data-blog-id="1">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Small Modular Reactor">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">May 15, 2023</div>
+                        <h3>The Future of Small Modular Reactors</h3>
+                        <p class="blog-excerpt">Exploring how small modular reactors are revolutionizing the nuclear energy landscape with their flexibility and enhanced safety features.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-card" data-blog-id="2">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1597362925123-77861d3fbac7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nuclear Waste Recycling">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">April 28, 2023</div>
+                        <h3>Advancements in Nuclear Waste Recycling</h3>
+                        <p class="blog-excerpt">Breakthrough technologies in nuclear waste recycling that promise to significantly reduce the long-term environmental impact of nuclear energy.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-card" data-blog-id="3">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Carbon Neutrality">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">April 10, 2023</div>
+                        <h3>Nuclear Energy's Role in Carbon Neutrality</h3>
+                        <p class="blog-excerpt">How nuclear power can help nations achieve their carbon neutrality goals while providing reliable, baseload power to the grid.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Detail Modal -->
+    <div class="blog-modal" id="blogModal">
+        <div class="blog-modal-content">
+            <div class="blog-modal-header">
+                <img id="blogModalImage" src="" alt="">
+                <button class="blog-modal-close" id="blogModalClose">✕</button>
+            </div>
+            <div class="blog-modal-body">
+                <h2 class="blog-modal-title" id="blogModalTitle"></h2>
+                <div class="blog-modal-meta">
+                    <div class="author"><span>👤</span> <span id="blogModalAuthor"></span></div>
+                    <div class="date"><span>📅</span> <span id="blogModalDate"></span></div>
+                </div>
+                <div id="blogModalContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch to learn more about our nuclear energy solutions</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Reach Out to Our Team</h3>
+                    <p><span>📍</span> 123 Energy Avenue, Tech City, CA 94025</p>
+                    <p><span>📞</span> +1 (555) 123-4567</p>
+                    <p><span>✉️</span> info@fissionprime.com</p>
+                    <p><span>🕒</span> Monday - Friday: 9:00 AM - 6:00 PM</p>
+                    <p>Our team of nuclear energy experts is ready to answer your questions and discuss how FissionPrime can help with your clean energy needs. Whether you're looking for consulting services, technology solutions, or partnership opportunities, we're here to help.</p>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>About FissionPrime</h4>
+                    <p>We're pioneering the future of clean energy through advanced nuclear fission technology and innovative solutions for a sustainable world.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Nuclear Power Plant Design</a></li>
+                        <li><a href="#">Fission Technology Research</a></li>
+                        <li><a href="#">Safety & Compliance</a></li>
+                        <li><a href="#">Waste Management</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect With Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 FissionPrime. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Blog data
+        const blogPosts = {
+            1: {
+                title: "The Future of Small Modular Reactors",
+                author: "Dr. Sarah Johnson",
+                date: "May 15, 2023",
+                image: "https://images.unsplash.com/photo-1581094271901-8022df4466f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                content: `
+                    <p>Small Modular Reactors (SMRs) represent a paradigm shift in nuclear energy technology, offering a more flexible, scalable, and economically viable approach to nuclear power generation. Unlike traditional large-scale nuclear reactors that require massive capital investment and long construction times, SMRs are designed to be built in factories and transported to sites for assembly, significantly reducing both costs and construction timelines.</p>
+                    
+                    <h3>Key Advantages of SMRs</h3>
+                    <p>One of the most significant advantages of SMRs is their enhanced safety features. With smaller reactor cores and passive safety systems that rely on natural physical processes like gravity and natural circulation, SMRs can maintain cooling during emergencies without external power or human intervention. This inherent safety design reduces the risk of accidents and makes SMRs an attractive option for regions concerned about nuclear safety.</p>
+                    
+                    <p>Another major benefit is their scalability. SMRs can be deployed in modules, allowing power plants to start with a small capacity and add additional modules as energy demand grows. This modularity makes nuclear power accessible to smaller communities and industries that couldn't support a traditional large reactor.</p>
+                    
+                    <h3>Current Developments</h3>
+                    <p>Several countries are actively developing SMR technology. In the United States, companies like NuScale Power and TerraPower are leading the way with designs that have received regulatory approval. Russia has already deployed the world's first floating nuclear power plant using SMR technology, while China is constructing multiple SMR units as part of its clean energy strategy.</p>
+                    
+                    <p>The International Atomic Energy Agency (IAEA) reports that over 70 SMR designs are under development globally, with expectations that the first commercial SMRs could be operational by the late 2020s. This rapid development pace underscores the growing recognition of SMRs as a critical component of future clean energy systems.</p>
+                    
+                    <h3>Challenges and Considerations</h3>
+                    <p>Despite their promise, SMRs face several challenges. Regulatory frameworks designed for traditional reactors need adaptation to accommodate the unique characteristics of SMRs. Supply chain development for standardized components and fuel fabrication must be established. Additionally, public perception and acceptance remain hurdles that the industry must address through transparent communication and demonstration of safety.</p>
+                    
+                    <p>Economic viability is another consideration. While SMRs offer lower upfront costs per unit, their levelized cost of electricity must be competitive with other energy sources. Achieving economies of scale through factory production and multiple deployments will be crucial to making SMRs economically attractive.</p>
+                    
+                    <h3>The Path Forward</h3>
+                    <p>As we look toward a carbon-neutral future, SMRs offer a promising solution to provide reliable, baseload power with minimal environmental impact. Their ability to complement renewable energy sources by providing consistent power when the sun isn't shining or the wind isn't blowing makes them an essential component of a balanced clean energy portfolio.</p>
+                    
+                    <p>With continued technological advancement, regulatory support, and public engagement, Small Modular Reactors are poised to play a transformative role in the global energy landscape, helping to meet growing energy demands while addressing climate change challenges.</p>
+                `
+            },
+            2: {
+                title: "Advancements in Nuclear Waste Recycling",
+                author: "Dr. Michael Chen",
+                date: "April 28, 2023",
+                image: "https://images.unsplash.com/photo-1597362925123-77861d3fbac7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                content: `
+                    <p>Nuclear waste recycling represents one of the most promising frontiers in nuclear energy technology, offering solutions to one of the industry's most persistent challenges. For decades, the management of spent nuclear fuel has been a subject of public concern and scientific research. Today, groundbreaking advancements in recycling technologies are transforming nuclear waste from a liability into a valuable resource.</p>
+                    
+                    <h3>The Current State of Nuclear Waste</h3>
+                    <p>Spent nuclear fuel, often referred to as nuclear waste, contains approximately 95% reusable materials, including uranium and plutonium, with only about 5% being actual waste products. Traditional nuclear fuel cycles use this fuel only once before disposing of it, despite the majority of its energy potential remaining untapped. This "once-through" approach not only wastes valuable resources but also creates long-term storage challenges.</p>
+                    
+                    <p>Currently, most countries store spent fuel in cooling pools at reactor sites before transferring it to dry cask storage for long-term management. While these storage methods are safe, they represent a temporary solution rather than a permanent one. The development of advanced recycling technologies aims to change this paradigm.</p>
+                    
+                    <h3>Advanced Recycling Technologies</h3>
+                    <p>Several innovative recycling processes are emerging that promise to revolutionize nuclear waste management. One of the most promising is pyroprocessing, a high-temperature method that separates nuclear materials from waste products without using water-based solvents. This approach offers significant advantages over traditional aqueous reprocessing, including reduced proliferation risks and better compatibility with advanced reactor designs.</p>
+                    
+                    <p>Another groundbreaking technology is the use of accelerator-driven systems (ADS) for transmutation. These systems use particle accelerators to produce neutrons that can transform long-lived radioactive isotopes in nuclear waste into shorter-lived or stable isotopes, significantly reducing the long-term radiotoxicity of nuclear waste.</p>
+                    
+                    <p>France has been a pioneer in nuclear recycling through its COGEMA La Hague facility, which has been reprocessing spent fuel for decades. The country recycles approximately 96% of its spent nuclear fuel, recovering reusable materials and reducing the volume of high-level waste by a factor of five compared to direct disposal.</p>
+                    
+                    <h3>Benefits of Nuclear Waste Recycling</h3>
+                    <p>The benefits of advanced nuclear recycling are multifaceted. Environmentally, recycling reduces the volume and radiotoxicity of nuclear waste, minimizing the long-term burden on future generations. Economically, it recovers valuable energy resources, reducing the need for new uranium mining and extending the sustainability of nuclear fuel supplies.</p>
+                    
+                    <p>From a security perspective, advanced recycling technologies can reduce proliferation risks by keeping radioactive materials mixed with highly radioactive fission products, making them difficult to divert for weapons purposes. Additionally, recycling supports the development of advanced reactor technologies that can utilize recycled fuels more efficiently.</p>
+                    
+                    <h3>Challenges and Future Directions</h3>
+                    <p>Despite its promise, nuclear waste recycling faces several challenges. The initial capital costs for recycling facilities are substantial, and regulatory frameworks need to evolve to accommodate new technologies. Public perception remains a hurdle, as recycling is sometimes confused with reprocessing methods that have raised proliferation concerns in the past.</p>
+                    
+                    <p>Research is ongoing to address these challenges. The development of more efficient separation processes, advanced materials for recycling equipment, and integrated fuel cycle models are all areas of active investigation. International collaboration is also essential, as nuclear waste management is a global challenge that requires shared solutions.</p>
+                    
+                    <h3>The Path to a Circular Nuclear Economy</h3>
+                    <p>The future of nuclear energy lies in creating a closed fuel cycle where waste is minimized and resources are maximized. Advanced recycling technologies are key to achieving this vision, transforming nuclear power into a truly sustainable energy source.</p>
+                    
+                    <p>As these technologies mature and gain regulatory approval, we can expect to see a shift away from the once-through fuel cycle toward more sustainable approaches. This evolution will not only address the waste challenge but also enhance the economic and environmental credentials of nuclear energy as a cornerstone of a clean energy future.</p>
+                `
+            },
+            3: {
+                title: "Nuclear Energy's Role in Carbon Neutrality",
+                author: "Dr. Emily Rodriguez",
+                date: "April 10, 2023",
+                image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                content: `
+                    <p>As the world grapples with the urgent need to address climate change, the quest for carbon neutrality has become a central focus of global energy policy. Among the various clean energy solutions, nuclear power stands out as a proven, reliable, and scalable technology that can play a pivotal role in achieving carbon neutrality goals.</p>
+                    
+                    <h3>The Carbon Challenge</h3>
+                    <p>The Intergovernmental Panel on Climate Change (IPCC) has made it clear that limiting global warming to 1.5°C above pre-industrial levels requires rapid, deep, and sustained reductions in greenhouse gas emissions. For many countries, this means transitioning away from fossil fuels toward clean energy sources. While renewable energy sources like solar and wind have seen tremendous growth, they face challenges related to intermittency and land use that nuclear power can help address.</p>
+                    
+                    <p>Nuclear energy is already making significant contributions to carbon reduction. Globally, nuclear power avoids approximately 2.5 gigatons of carbon dioxide emissions annually—equivalent to taking over 500 million cars off the road. This existing contribution demonstrates nuclear power's potential as a major tool in decarbonization efforts.</p>
+                    
+                    <h3>Nuclear's Unique Advantages</h3>
+                    <p>One of nuclear energy's most significant advantages is its ability to provide reliable, baseload power regardless of weather conditions. Unlike solar and wind, which are intermittent, nuclear plants operate continuously at high capacity factors, typically exceeding 90%. This reliability makes nuclear an essential complement to variable renewables, ensuring grid stability as the share of renewables increases.</p>
+                    
+                    <p>Another key advantage is nuclear power's high energy density. A single nuclear power plant requires a fraction of the land area needed for solar or wind farms to produce the same amount of electricity. This land efficiency makes nuclear particularly valuable in densely populated regions or areas where land use is a critical concern.</p>
+                    
+                    <p>Nuclear energy also has one of the lowest lifecycle carbon emissions of any energy source. When accounting for all stages from construction to decommissioning, nuclear power emits approximately 12 grams of CO2 equivalent per kilowatt-hour—comparable to wind and lower than solar when considering the full lifecycle.</p>
+                    
+                    <h3>Global Examples of Nuclear Decarbonization</h3>
+                    <p>Several countries have successfully leveraged nuclear energy to decarbonize their electricity sectors. France stands as the most prominent example, with nuclear power providing approximately 70% of its electricity and resulting in one of the lowest carbon intensities among developed nations. This achievement demonstrates the potential for nuclear to support deep decarbonization at a national scale.</p>
+                    
+                    <p>Sweden has also effectively used nuclear power to reduce emissions, with nuclear providing about 30% of its electricity alongside significant hydro and wind resources. The country's electricity system is nearly carbon-free, showcasing how nuclear can complement other clean energy sources.</p>
+                    
+                    <p>In Asia, countries like South Korea and China are expanding their nuclear fleets as part of their strategies to reduce air pollution and carbon emissions. These nations recognize nuclear power's ability to provide large-scale, reliable clean energy to support economic growth while meeting climate commitments.</p>
+                    
+                    <h3>Integrating Nuclear with Renewables</h3>
+                    <p>The future clean energy system will likely rely on a diverse portfolio of technologies, with nuclear playing a crucial role alongside renewables. Nuclear plants can provide the stable, baseload power that allows grids to accommodate higher penetrations of variable solar and wind. This synergy creates a more resilient and reliable clean energy system.</p>
+                    
+                    <p>Advanced nuclear technologies, including Small Modular Reactors (SMRs) and Generation IV reactors, will further enhance this integration. SMRs, with their smaller size and flexible operation, can better complement variable renewables by adjusting output to match demand fluctuations. Some advanced reactor designs can even provide high-temperature heat for industrial processes, expanding nuclear's decarbonization potential beyond electricity generation.</p>
+                    
+                    <h3>Overcoming Challenges to Nuclear Expansion</h3>
+                    <p>Despite its benefits, nuclear energy faces challenges that must be addressed to realize its full potential in carbon neutrality efforts. High upfront capital costs, long construction times, and regulatory hurdles have slowed deployment in many regions. Public perception and waste management concerns also remain significant barriers.</p>
+                    
+                    <p>Addressing these challenges requires concerted efforts from policymakers, industry, and the public. Streamlined regulatory processes, innovative financing models, and transparent communication about safety and waste management are all essential. The development of standardized reactor designs and factory construction can help reduce costs and construction times.</p>
+                    
+                    <h3>The Path to Carbon Neutrality with Nuclear</h3>
+                    <p>Achieving global carbon neutrality will require all available clean energy technologies, and nuclear power must be a significant part of the solution. The International Energy Agency (IEA) has stated that nuclear power will need to double by 2050 to meet global climate goals—a challenging but achievable target with the right policies and investments.</p>
+                    
+                    <p>As we look toward a sustainable future, nuclear energy offers a proven, scalable, and reliable path to deep decarbonization. By leveraging its unique advantages and addressing its challenges, we can unlock nuclear power's full potential in the transition to a carbon-neutral world.</p>
+                `
+            }
+        };
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuToggle.textContent = '☰';
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real implementation, this would submit the form data to a server
+            // For this demo, we'll just show a success message
+            const formElements = this.elements;
+            for (let i = 0; i < formElements.length; i++) {
+                if (formElements[i].type !== 'submit') {
+                    formElements[i].value = '';
+                }
+            }
+            
+            // Create and show success message
+            const successMessage = document.createElement('div');
+            successMessage.style.backgroundColor = '#d4edda';
+            successMessage.style.color = '#155724';
+            successMessage.style.padding = '1rem';
+            successMessage.style.borderRadius = '4px';
+            successMessage.style.marginTop = '1rem';
+            successMessage.textContent = 'Thank you for your message! We will get back to you soon.';
+            
+            this.appendChild(successMessage);
+            
+            // Remove success message after 5 seconds
+            setTimeout(() => {
+                successMessage.remove();
+            }, 5000);
+        });
+        
+        // Add active class to navigation links based on scroll position
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navItems = document.querySelectorAll('.nav-links a');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href').slice(1) === current) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // Blog modal functionality
+        const blogModal = document.getElementById('blogModal');
+        const blogModalClose = document.getElementById('blogModalClose');
+        const blogModalImage = document.getElementById('blogModalImage');
+        const blogModalTitle = document.getElementById('blogModalTitle');
+        const blogModalAuthor = document.getElementById('blogModalAuthor');
+        const blogModalDate = document.getElementById('blogModalDate');
+        const blogModalContent = document.getElementById('blogModalContent');
+        
+        // Handle image loading errors
+        function handleImageError(img) {
+            img.style.display = 'none';
+            const fallback = document.createElement('div');
+            fallback.className = 'fallback';
+            if (img.parentElement.classList.contains('blog-modal-header')) {
+                fallback.textContent = '🔬';
+            } else {
+                fallback.textContent = '📝';
+            }
+            img.parentElement.appendChild(fallback);
+            img.parentElement.classList.add('fallback');
+        }
+        
+        // Open blog modal when clicking on a blog card
+        document.querySelectorAll('.blog-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                // Prevent opening if clicking on the "Read More" link
+                if (e.target.classList.contains('read-more')) {
+                    e.preventDefault();
+                }
+                
+                const blogId = this.getAttribute('data-blog-id');
+                const blog = blogPosts[blogId];
+                
+                if (blog) {
+                    blogModalImage.src = blog.image;
+                    blogModalImage.alt = blog.title;
+                    blogModalTitle.textContent = blog.title;
+                    blogModalAuthor.textContent = blog.author;
+                    blogModalDate.textContent = blog.date;
+                    blogModalContent.innerHTML = blog.content;
+                    
+                    // Reset modal header class
+                    blogModalImage.parentElement.classList.remove('fallback');
+                    const existingFallback = blogModalImage.parentElement.querySelector('.fallback');
+                    if (existingFallback) {
+                        existingFallback.remove();
+                    }
+                    
+                    blogModal.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+                }
+            });
+        });
+        
+        // Handle image loading errors for blog cards
+        document.querySelectorAll('.blog-image img').forEach(img => {
+            img.onerror = function() {
+                handleImageError(this);
+            };
+        });
+        
+        // Handle image loading error for modal
+        blogModalImage.onerror = function() {
+            handleImageError(this);
+        };
+        
+        // Close blog modal
+        function closeBlogModal() {
+            blogModal.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+        
+        blogModalClose.addEventListener('click', closeBlogModal);
+        
+        // Close modal when clicking outside the content
+        blogModal.addEventListener('click', function(e) {
+            if (e.target === blogModal) {
+                closeBlogModal();
+            }
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && blogModal.classList.contains('active')) {
+                closeBlogModal();
+            }
+        });
+    </script>
+</body>
+
+</html>
