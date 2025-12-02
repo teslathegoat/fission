@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FissionPrime.com | Domain for Sale</title>
+    <title>FissionPrime.com | Premium Domain for Sale</title>
     <style>
         * {
             margin: 0;
@@ -13,17 +13,128 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0d1117;
-            color: #e6edf3;
+            background-color: #0a0e1a;
+            color: #ffffff;
             line-height: 1.6;
             min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* Animated atomic background */
+        .atomic-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at center, #0a1929 0%, #000511 100%);
+            overflow: hidden;
+        }
+        
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(0, 255, 255, 0.3);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            animation: float 15s infinite linear;
+        }
+        
+        .nucleus {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 150, 255, 0.1) 0%, rgba(0, 50, 150, 0.05) 70%, transparent 100%);
+            box-shadow: 0 0 100px rgba(0, 150, 255, 0.2);
+            animation: pulse 4s infinite alternate;
+        }
+        
+        .electron {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #00ffff;
+            box-shadow: 0 0 10px #00ffff;
+            transform-origin: center;
+        }
+        
+        .orbit {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100px);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 100px rgba(0, 150, 255, 0.2);
+            }
+            100% {
+                box-shadow: 0 0 150px rgba(0, 150, 255, 0.4);
+            }
+        }
+        
+        @keyframes orbit1 {
+            0% {
+                transform: rotate(0deg) translateX(120px) rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg) translateX(120px) rotate(-360deg);
+            }
+        }
+        
+        @keyframes orbit2 {
+            0% {
+                transform: rotate(120deg) translateX(180px) rotate(-120deg);
+            }
+            100% {
+                transform: rotate(480deg) translateX(180px) rotate(-480deg);
+            }
+        }
+        
+        @keyframes orbit3 {
+            0% {
+                transform: rotate(240deg) translateX(240px) rotate(-240deg);
+            }
+            100% {
+                transform: rotate(600deg) translateX(240px) rotate(-600deg);
+            }
         }
         
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 2rem;
             text-align: center;
+            position: relative;
+            z-index: 1;
         }
         
         header {
@@ -31,139 +142,188 @@
         }
         
         .domain-name {
-            font-size: 3.5rem;
+            font-size: 4rem;
             font-weight: 700;
-            color: #58a6ff;
+            color: #00ffff;
             margin-bottom: 1.5rem;
             letter-spacing: -1px;
-            text-shadow: 0 0 20px rgba(88, 166, 255, 0.3);
+            text-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+            animation: glow 2s ease-in-out infinite alternate;
         }
         
         .for-sale {
-            font-size: 2rem;
-            color: #f85149;
+            font-size: 2.2rem;
+            color: #ff6b6b;
             margin-bottom: 2rem;
             font-weight: 600;
-            text-shadow: 0 0 10px rgba(248, 81, 73, 0.3);
+            text-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
         }
         
         .description {
             font-size: 1.2rem;
-            color: #8b949e;
-            max-width: 600px;
+            color: #a0d2ff;
+            max-width: 700px;
             margin: 0 auto 3rem;
+            background: rgba(0, 20, 40, 0.6);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 200, 255, 0.2);
         }
         
         .contact-section {
-            background-color: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 8px;
+            background: rgba(10, 25, 47, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 200, 255, 0.3);
+            border-radius: 10px;
             padding: 2.5rem;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
             margin-bottom: 3rem;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         .contact-section:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 150, 255, 0.2);
         }
         
         .contact-title {
             font-size: 1.5rem;
             margin-bottom: 1.5rem;
-            color: #e6edf3;
+            color: #ffffff;
         }
         
         .email {
             font-size: 1.8rem;
             margin-bottom: 2rem;
-            color: #58a6ff;
+            color: #00ffff;
         }
         
         .email a {
-            color: #58a6ff;
+            color: #00ffff;
             text-decoration: none;
             transition: color 0.3s ease, text-shadow 0.3s ease;
         }
         
         .email a:hover {
-            color: #79c0ff;
-            text-shadow: 0 0 8px rgba(88, 166, 255, 0.5);
+            color: #ffffff;
+            text-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
         }
         
         .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, #58a6ff 0%, #1f6feb 100%);
+            background: linear-gradient(135deg, #00a8ff 0%, #0078ff 100%);
             color: white;
             padding: 0.8rem 2rem;
-            border-radius: 6px;
+            border-radius: 30px;
             font-size: 1.1rem;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(88, 166, 255, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 120, 255, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .cta-button:hover:before {
+            left: 100%;
         }
         
         .cta-button:hover {
-            background: linear-gradient(135deg, #79c0ff 0%, #388bfd 100%);
-            box-shadow: 0 6px 20px rgba(88, 166, 255, 0.5);
-            transform: translateY(-1px);
+            background: linear-gradient(135deg, #00c3ff 0%, #0090ff 100%);
+            box-shadow: 0 6px 20px rgba(0, 150, 255, 0.6);
+            transform: translateY(-2px);
         }
         
         footer {
             margin-top: 2rem;
-            color: #656d76;
+            color: #6c7a89;
             font-size: 0.9rem;
-        }
-        
-        .glow {
-            animation: glow 2s ease-in-out infinite alternate;
         }
         
         @keyframes glow {
             from {
-                text-shadow: 0 0 10px rgba(88, 166, 255, 0.5);
+                text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
             }
             to {
-                text-shadow: 0 0 20px rgba(88, 166, 255, 0.8), 0 0 30px rgba(88, 166, 255, 0.6);
+                text-shadow: 0 0 20px rgba(0, 255, 255, 0.9), 0 0 30px rgba(0, 255, 255, 0.7);
             }
         }
         
         @media (max-width: 768px) {
             .domain-name {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
             
             .for-sale {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
             }
             
             .description {
                 font-size: 1rem;
+                padding: 1.2rem;
             }
             
             .email {
                 font-size: 1.4rem;
             }
+            
+            .nucleus {
+                width: 200px;
+                height: 200px;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="atomic-bg">
+        <div class="nucleus"></div>
+        
+        <!-- Electron orbits -->
+        <div class="orbit" style="width: 240px; height: 240px;"></div>
+        <div class="orbit" style="width: 360px; height: 360px;"></div>
+        <div class="orbit" style="width: 480px; height: 480px;"></div>
+        
+        <!-- Electrons -->
+        <div class="electron" style="animation: orbit1 8s infinite linear;"></div>
+        <div class="electron" style="animation: orbit2 12s infinite linear;"></div>
+        <div class="electron" style="animation: orbit3 16s infinite linear;"></div>
+        
+        <!-- Floating particles -->
+        <div class="particle" style="width: 4px; height: 4px; top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="particle" style="width: 6px; height: 6px; top: 60%; left: 80%; animation-delay: 2s;"></div>
+        <div class="particle" style="width: 3px; height: 3px; top: 30%; left: 70%; animation-delay: 4s;"></div>
+        <div class="particle" style="width: 5px; height: 5px; top: 80%; left: 20%; animation-delay: 6s;"></div>
+        <div class="particle" style="width: 4px; height: 4px; top: 40%; left: 40%; animation-delay: 8s;"></div>
+        <div class="particle" style="width: 7px; height: 7px; top: 70%; left: 60%; animation-delay: 10s;"></div>
+        <div class="particle" style="width: 3px; height: 3px; top: 10%; left: 30%; animation-delay: 12s;"></div>
+        <div class="particle" style="width: 5px; height: 5px; top: 50%; left: 90%; animation-delay: 14s;"></div>
+    </div>
+    
     <div class="container">
         <header>
-            <h1 class="domain-name glow">FissionPrime.com</h1>
-            <p class="for-sale">This domain is for sale</p>
+            <h1 class="domain-name">FissionPrime.com</h1>
+            <p class="for-sale">This premium domain is for sale</p>
         </header>
         
         <main>
             <p class="description">
-                Premium domain name available for purchase. Perfect for tech startups, 
-                energy companies, or innovative businesses looking for a strong online presence.
+                A premium, brand-ready domain that conveys innovation, energy, and cutting-edge technology. 
+                Perfect for businesses in nuclear energy, clean-tech, tech startups, or scientific research.
             </p>
             
             <section class="contact-section">
-                <h2 class="contact-title">Interested in acquiring this domain?</h2>
+                <h2 class="contact-title">Interested in acquiring this premium domain?</h2>
                 <p class="email">
                     <a href="mailto:technicaladk@gmail.com">technicaladk@gmail.com</a>
                 </p>
